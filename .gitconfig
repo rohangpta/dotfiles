@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+
+[user]
+	email = rohangupta883@gmail.com
+	name = Rohan Gupta
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = emacs

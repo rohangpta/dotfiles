@@ -1,0 +1,37 @@
+# Mac
+
+.DS_Store
+
+# Logging
+
+*.log
+log/
+
+# Compiled source
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.pyo
+
+# Databases
+
+*.sql
+*.sqlite
+
+# IDE-specific
+
+.vscode
+.idea
+.iml
+*.sublime-workspace
+
+# Temp
+
+*.bak
+*.swp
+*.swo
