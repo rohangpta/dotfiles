@@ -8,7 +8,7 @@ link_dotfiles() {
         name=$(basename $file)
         t=$TGT/$name
         echo -n $name
-        regex=^("README.md"|".git")$
+        regex=^("README.md"|".git"|"setup.sh")$
 
         if [[ $name =~ $regex ]]; then
             echo " skipping"
