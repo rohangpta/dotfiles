@@ -106,3 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+[ -f "/Users/rohangupta/.ghcup/env" ] && source "/Users/rohangupta/.ghcup/env" # ghcup-env
+# export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+
+eval "$(atuin init zsh)"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
