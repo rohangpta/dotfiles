@@ -1,0 +1,22 @@
+import:
+  - ~/.config/alacritty/themes/themes/github_dark_default.yaml
+scrolling:
+  history: 100000
+  multiplier: 3
+
+draw_bold_text_with_bright_colors: true
+
+font:
+  normal:
+    family: Menlo
+    style: Regular
+  bold:
+    family: Menlo
+    style: Regular
+  italic:
+    family: Menlo
+    style: Italic
+  bold_italic:
+    family: Menlo
+    style: Bold Italic
+  size: 14.0

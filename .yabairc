@@ -1,5 +1,4 @@
 # layout
-
 yabai -m config layout bsp
 
 # window gaps

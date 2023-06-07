@@ -6,19 +6,20 @@ link_dotfiles() {
 
     for file in $SRC/*(D); do
         name=$(basename $file)
+
         t=$TGT/$name
-        echo -n $name
         regex=^("README.md"|".git"|"setup.sh")$
 
-        if [[ $name =~ $regex ]]; then
-            echo " skipping"
+        if [[ $name =~ $regex ]] || [ -h $t ]; then
             continue
-        elif [ -h $t ]; then
-            echo " [warning] already symlinked"
-        elif [ -f $t ] || [ -d $t ]; then
+        fi
+
+        echo -n $name
+
+        if [ -f $t ] || [ -d $t ]; then
             echo " [error] file exists or is directory"
         else
-            ln -s $file $t
+            ln -s "$file" "$t"
             if [ $? -ne 0 ]; then
                 echo " [error] failed unexpectedly"
             else
