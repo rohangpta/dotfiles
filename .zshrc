@@ -110,6 +110,15 @@ export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 [ -f "/Users/rohangupta/.ghcup/env" ] && source "/Users/rohangupta/.ghcup/env" # ghcup-env
 # export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 eval "$(atuin init zsh)"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/rohangupta/.codeium/windsurf/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+alias gemini='npx https://github.com/google-gemini/gemini-cli'

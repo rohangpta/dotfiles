@@ -32,6 +32,11 @@ set showcmd
 
 nnoremap / /\v
 vnoremap / /\v
+
+nnoremap J 10j
+nnoremap K 10k
+
+
 set hlsearch
 set incsearch
 set ignorecase

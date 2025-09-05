@@ -4,6 +4,7 @@ alias currsem="cd $HOME/Desktop/S23"
 alias dev="cd $HOME/Desktop/Developer/"
 alias dl="cd $HOME/Downloads"
 alias k="kubectl"
+alias tf="terraform"
 alias e="emacs --daemon"
 alias grep="rg"
 alias cat="bat"
@@ -15,7 +16,7 @@ eval "$(atuin init zsh)"
 bindkey '^r' _atuin_search_widget
 
 PATH="/Users/rohangupta/Downloads/traefik-migration-tool_v0.13.5_darwin_arm64:$PATH"
-PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:$PATH"
+
 PATH="/Applications/Emacs.app/Contents/MacOS:$PATH"
 PATH="/Users/rohangupta/.emacs.d/bin:$PATH"
 PATH="/Library/TeX/texbin:$PATH"
@@ -32,14 +33,14 @@ done
 export PATH
 bindkey -v
 
-# >>> coursier install directory >>>
 export PATH="$PATH:/Users/rohangupta/Library/Application Support/Coursier/bin"
-# <<< coursier install directory <<<
+alias gs='git status'
+alias gd='git diff HEAD'
+alias c='clear'
+alias t='tmux -a -t 0'
+alias ca="$HOME/.local/bin/cursor-agent"
 
-vterm_prompt_end() {
-    if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
-        vterm_printf "51;A$(whoami)@$(hostname):$(pwd)";
-    fi
+m() {
+  python3 -c "from math import *; print($*)"
 }
-setopt PROMPT_SUBST
-PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+alias llmfuse='cd /Users/rohangupta/Desktop/Developer/llmfuse'

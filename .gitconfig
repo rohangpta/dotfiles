@@ -6,8 +6,11 @@
 
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = emacs
+	editor = vim
 [pull]
 	rebase = true
 [init]
 	templatedir = /Users/rohangupta/.git-templates
+[safe]
+	directory = /Users/rohangupta/Desktop/Developer/SWE-agent
+	directory = /Users/rohangupta/Desktop/Developer/penn-clubs

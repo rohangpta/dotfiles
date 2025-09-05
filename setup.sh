@@ -8,7 +8,7 @@ link_dotfiles() {
         name=$(basename $file)
 
         t=$TGT/$name
-        regex=^("README.md"|".git"|"setup.sh")$
+        regex='^(README\.md|\.git|setup\.sh)$'
 
         if [[ $name =~ $regex ]] || [ -h $t ]; then
             continue
