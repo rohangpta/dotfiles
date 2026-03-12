@@ -117,8 +117,23 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 eval "$(atuin init zsh)"
 
-# Added by Windsurf
-export PATH="/Users/rohangupta/.codeium/windsurf/bin:$PATH"
-
 . "$HOME/.local/bin/env"
-alias gemini='npx https://github.com/google-gemini/gemini-cli'
+
+# opencode
+export PATH=/Users/rohangupta/.opencode/bin:$PATH
+
+# Use nvim as default editor
+alias vi='nvim'
+alias vim='nvim'
+export EDITOR='nvim'
+
+# bun completions
+[ -s "/Users/rohangupta/.bun/_bun" ] && source "/Users/rohangupta/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

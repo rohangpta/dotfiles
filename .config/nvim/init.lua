@@ -1,0 +1,42 @@
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Leader key (must be set before lazy)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Load plugins
+require("lazy").setup("plugins")
+
+-- General settings
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 250
+vim.opt.undofile = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.scrolloff = 8
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+-- Custom keymaps
+vim.keymap.set({ "n", "v" }, "J", "10j", { desc = "Jump 10 lines down" })
+vim.keymap.set({ "n", "v" }, "K", "10k", { desc = "Jump 10 lines up" })
